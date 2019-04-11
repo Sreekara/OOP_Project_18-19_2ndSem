@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" prefHeight="1080.0" prefWidth="1920.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane fx:id="User_login" nodeOrientation="LEFT_TO_RIGHT" prefHeight="1080.0" prefWidth="1920.0" visible="false">
+         <children>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/media/sreekar/Do%20Not%20Touch/sreekar/sreekarbackup/blender/blender%20images/denoised/abstract1.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="700.0" layoutY="300.0" prefHeight="380.0" prefWidth="520.0" style="-fx-background-color: beige">
+               <children>
+                  <Label fx:id="label" layoutX="112.0" layoutY="53.0" prefHeight="24.0" prefWidth="300.0" text="Status:" textFill="RED" wrapText="true" />
+                  <TextField fx:id="username" layoutX="109.0" layoutY="106.0" prefHeight="36.0" prefWidth="278.0" promptText="Username" />
+                  <PasswordField fx:id="password" layoutX="109.0" layoutY="181.0" prefHeight="36.0" prefWidth="278.0" promptText="Password" />
+                  <Button fx:id="login" layoutX="262.0" layoutY="248.0" mnemonicParsing="false" onAction="#pressbutton" prefHeight="36.0" prefWidth="125.0" text="Login" />
+                  <Hyperlink fx:id="new_register" layoutX="248.0" layoutY="308.0" prefHeight="24.0" prefWidth="140.0" text="New here? Register" underline="true" />
+                  <Hyperlink fx:id="forget_password" layoutX="109.0" layoutY="308.0" text="Forgot Password?" underline="true" />
+               </children>
+            </Pane>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane fx:id="main_page" prefHeight="1080.0" prefWidth="1920.0">
+         <children>
+            <SplitPane dividerPositions="0.12" layoutY="70.0" prefHeight="1010.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="86.0">
+                     <children>
+                        <ToggleButton fx:id="btn_stage_1" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="115.0" text="Stage 1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Stages" />
+                           </toggleGroup></ToggleButton>
+                        <ToggleButton fx:id="btn_stage_2" layoutY="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="115.0" text="Stage 2" toggleGroup="$Stages" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+                        <ToggleButton fx:id="btn_stage_3" layoutY="140.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="115.0" text="Stage 3" toggleGroup="$Stages" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0" />
+                        <ToggleButton fx:id="btn_stage_4" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="115.0" text="Stage 4" toggleGroup="$Stages" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="210.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <SplitPane dividerPositions="0.15" layoutX="170.0" layoutY="14.0" prefHeight="348.0" prefWidth="1034.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ToggleButton layoutX="31.0" layoutY="14.0" mnemonicParsing="false" prefHeight="70.0" text="ToggleButton" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Sub_Stages" />
+                                       </toggleGroup></ToggleButton>
+                                    <ToggleButton layoutY="70.0" mnemonicParsing="false" prefHeight="70.0" text="ToggleButton" toggleGroup="$Sub_Stages" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+                                    <ToggleButton layoutY="140.0" mnemonicParsing="false" prefHeight="70.0" text="ToggleButton" toggleGroup="$Sub_Stages" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
